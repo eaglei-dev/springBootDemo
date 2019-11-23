@@ -16,7 +16,9 @@ public class AppController {
 	
 	@GetMapping("/getMessage")
 	public void getMessage() {
-		ns.sendMessage();
+		String toEmail = "b.kernel0600@gmail.com";
+		String messageBody = "Hi. Message Sent.";
+		ns.sendMessage(toEmail, messageBody);
 	}
 
 }

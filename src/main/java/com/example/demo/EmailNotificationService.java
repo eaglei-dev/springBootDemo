@@ -1,24 +1,12 @@
 package com.example.demo;
-
-import java.util.Properties;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.websocket.Session;
-
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EmailNotificationService implements INotificationService {
 	
 	@Override
-	public String sendMessage() {
-		return "Sending Email";
+	public String sendMessage(EmailUser user) {
+		return "Sending Email from " + user.toString();
 	}
 //	private String fromEmailUsername = "sush@gmail.com";
 //	private String fromEmailPassword = "pass12";

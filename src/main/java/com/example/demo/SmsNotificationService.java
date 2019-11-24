@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 public class SmsNotificationService implements INotificationService {
 
 	@Override
-	public String sendMessage() {
-		return "Sending SMS";
+	public String sendMessage(EmailUser user) {
+		return "Sending SMS from "+user.toString();
 	}
 
 }

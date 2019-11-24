@@ -10,6 +10,9 @@ public class AppController {
 	@Qualifier("smsNotificationService") // @Qualifier("/beanName")
 	INotificationService ns;
 	
+	@Autowired
+	EmailUser getHrAdmin;
+	
 	@GetMapping("/greet")
 	public String greetUser() {
 		return "Hello World";
@@ -17,7 +20,7 @@ public class AppController {
 	
 	@GetMapping("/getMessage")
 	public String getMessage() {
-		return ns.sendMessage();
+		return ns.sendMessage(getHrAdmin);
 	}
 
 }

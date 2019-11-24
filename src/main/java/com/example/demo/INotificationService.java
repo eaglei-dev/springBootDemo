@@ -2,7 +2,7 @@ package com.example.demo;
 
 public interface INotificationService {
 
-	String sendMessage();
+	String sendMessage(EmailUser user);
 	
 	
 	//	private String fromEmailUsername = "sush@gmail.com";
